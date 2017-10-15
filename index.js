@@ -8,6 +8,6 @@ module.exports = function nomoretc(dispatch) {
 	})
 	dispatch.hook('S_ABNORMALITY_BEGIN', 2, (event) => {
 		if(!enabled){return true}
-		if(id==101300) {return false}
+		if(event.id==101300) {return false}
 	})
 }
