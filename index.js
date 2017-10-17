@@ -17,7 +17,13 @@ module.exports = function nomoretc(dispatch) {
 	
 	dispatch.hook('S_ABNORMALITY_BEGIN', 2, (event) => {
 		if(!enabled){return true}
-		if(event.id==101300 && event.stacks != 13) {return false}
-		if(!agressive && event.id==101300) {return false}
+		if(event.id == 101300 && event.stacks != 13) {return false}
+		if(!agressive && event.id == 101300) {return false}
+	})
+	
+	dispatch.hook('S_PARTY_MEMBER_ABNORMAL_ADD', 3, (event) => {
+		if(!enabled){return true}
+		if(event.id == 101300 && event.stacks != 13) {return false}
+		if(!agressive && event.id == 101300) {return false}
 	})
 }
