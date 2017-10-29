@@ -18,14 +18,14 @@ module.exports = function nomoretc(dispatch) {
 	dispatch.hook('S_ABNORMALITY_BEGIN', 2, (event) => {
 		if(!enabled){return true};
 		if((event.id == 101300 || event.id == 101200) && event.stacks != 13) {return false};
-		if(!agressive && (event.id == 101300 || event.id == 101200)) {return false};
+		if(agressive && (event.id == 101300 || event.id == 101200)) {return false};
 		return true;
 	})
 	
 	dispatch.hook('S_PARTY_MEMBER_ABNORMAL_ADD', 3, (event) => {
 		if(!enabled){return true};
 		if((event.id == 101300 || event.id == 101200) && event.stacks != 13) {return false};
-		if(!agressive && (event.id == 101300 || event.id == 101200)) {return false};
+		if(agressive && (event.id == 101300 || event.id == 101200)) {return false};
 		return true;
 	})
 }
