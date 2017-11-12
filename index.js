@@ -1,4 +1,4 @@
-const Command = require('command')
+/*const Command = require('command')
 module.exports = function nomoretc(dispatch) {
 	const command = Command(dispatch)
 	let enabled = true;
@@ -29,3 +29,4 @@ module.exports = function nomoretc(dispatch) {
 		return true;
 	})
 }
+*/
